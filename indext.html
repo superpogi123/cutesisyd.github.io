@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes or No Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC0CB;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        form {
+            background-color: #FFF0F5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 50%;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .question {
+            margin-bottom: 1em;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        function showImage() {
+            document.getElementById('form-questions').classList.add('hidden');
+            document.getElementById('result-image').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <form id="form-questions" onsubmit="showImage(); return false;">
+        <div class="question">
+            <p>1. Are you a girl?</p>
+            <input type="radio" id="girl-yes" name="girl" value="yes">
+            <label for="girl-yes">Yes</label><br>
+            <input type="radio" id="girl-no" name="girl" value="no">
+            <label for="girl-no">No</label><br><br>
+        </div>
+
+        <div class="question">
+            <p>2. Do you love cats?</p>
+            <input type="radio" id="cats-yes" name="cats" value="yes">
+            <label for="cats-yes">Yes</label><br>
+            <input type="radio" id="cats-no" name="cats" value="no">
+            <label for="cats-no">No</label><br><br>
+        </div>
+
+        <div class="question">
+            <p>3. Am I cute?</p>
+            <input type="radio" id="cute-yes" name="cute" value="yes">
+            <label for="cute-yes">Yes</label><br>
+            <input type="radio" id="cute-no" name="cute" value="no">
+            <label for="cute-no">No</label><br><br>
+        </div>
+
+        <div class="question">
+            <p>4. Are you breathing right now?</p>
+            <input type="radio" id="breathing-yes" name="breathing" value="yes">
+            <label for="breathing-yes">Yes</label><br>
+            <input type="radio" id="breathing-no" name="breathing" value="no">
+            <label for="breathing-no">No</label><br><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <img id="result-image" class="hidden" src="441584547_425896143685331_5180364794650446145_n.jpg" alt="Result Image">
+</body>
+</html>
